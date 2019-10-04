@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Crux Bmi Calc</string>
+    <string name="tab_text_1">BMI CALC</string>
+    <string name="tab_text_2">LENGTH CONVERTER</string>
+    <string name="tab_text_3">WEIGHT CONVERTER</string>
+    <string name="tab_text_4">BMI CHART</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="convert_from">CONVERT FROM</string>
+    <string name="convert_to">CONVERT TO</string>
+    <string name="weight">Enter your Weight in Kg</string>
+    <string name="height">Enter Your Height in Meters </string>
+    <string name="calc_bmi">Calculate Bmi</string>
+    <string name="result">Result</string>
+    <string name="unit_type">Unit Type</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="centimeters">CENTIMETERS</string>
+    <string name="meters">METERS</string>
+    <string name="kg">KG</string>
+    <string name="m">M</string>
+    <string name="submit">SUBMIT</string>
+    <string name="you_severely_underweight">You are Severely Underweight</string>
+    <string name="you_very_underweight">You are Very Underweight</string>
+    <string name="you_underweight">You are Underweight</string>
+    <string name="you_normal_weight">You are Normal weight</string>
+    <string name="you_over_weight">You are Over weight</string>
+    <string name="you_first_class_obese">You are First Class Obese</string>
+    <string name="you_second_class_obese">You are Second Class Obese</string>
+    <string name="you_third_class_obese">You are Third Class Obese</string>
+
+    <string name="severely_underweight"> Severely Underweight</string>
+    <string name="very_underweight"> Very Underweight</string>
+    <string name="underweight"> Underweight</string>
+    <string name="normal_weight">Normal weight</string>
+    <string name="over_weight"> Over weight</string>
+    <string name="first_class_obese"> First Class Obese</string>
+    <string name="second_class_obese"> Second Class Obese</string>
+    <string name="third_class_obese"> Third Class Obese</string>
+
+    <string name="action_feedback"> Feedback</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3062657192063025/1956387180</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3062657192063025/2854777131</string>
+    <string name="bmi_value"> BMI VALUE</string>
+    <string name="interpretation"> INTERPRETATION</string>
+
+    <string name="first"> 0 -15</string>
+    <string name="second"> 15 -16</string>
+    <string name="third"> 16 -18.5</string>
+    <string name="fourth">18.5 -25</string>
+    <string name="fifth"> 25 -30</string>
+    <string name="sixth"> 30 -35</string>
+    <string name="seventh"> 35 -40</string>
+    <string name="eight"> 40 and above</string>
+
+    <string-array name="length_units">
+        <item>Meters</item>
+        <item>Centimeters</item>
+        <item>Kilometers</item>
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Millimeters</item>
+        <item>Yards</item>
+        <item>Miles</item>
+
+
+    </string-array>
+
+    <string-array name="weight_units">
+        <item>Kilogram</item>
+        <item>Gram</item>
+        <item>Tonnes</item>
+        <item>Pounds</item>
+
+
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/table_chart"
+    android:layout_height="match_parent">
+
+
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:text="@string/bmi_value"
+            android:textIsSelectable="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:textColor="@color/colorPrimaryDark"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:text="@string/interpretation"
+            android:textIsSelectable="true"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="20sp"
+            android:layout_marginStart="14dp"
+            android:text="@string/first"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="20sp"
+            android:layout_marginStart="13dp"
+            android:text="@string/severely_underweight"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="20sp"
+            android:layout_marginStart="14dp"
+            android:text="@string/second"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:textSize="20sp"
+            android:text="@string/very_underweight"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:textSize="20sp"
+            android:layout_marginStart="14dp"
+            android:text="@string/third"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:text="@string/underweight"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/fourth"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:text="@string/normal_weight"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/fifth"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:text="@string/over_weight"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/sixth"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:text="@string/first_class_obese"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/seventh"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:text="@string/second_class_obese"
+
+            />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="14dp"
+            android:text="@string/eight"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height='wrap_content'
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="13dp"
+            android:text="@string/third_class_obese"
+
+            />
+    </TableRow>
+
+
+</TableLayout>

@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "860333091178",
+    "firebase_url": "https://crux-bmi-calc.firebaseio.com",
+    "project_id": "crux-bmi-calc",
+    "storage_bucket": "crux-bmi-calc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:860333091178:android:6b1c07754d249325",
+        "android_client_info": {
+          "package_name": "com.wordpress.cruxonlinedotblog.cruxbmicalc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "860333091178-ba346f9u0g1b0fvmcuiat7v8pv3038ka.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wordpress.cruxonlinedotblog.cruxbmicalc",
+            "certificate_hash": "5051bab232a7b748e9ef0ad050271c2cf260ef87"
+          }
+        },
+        {
+          "client_id": "860333091178-lcrs195oq715v9u2ps8qeu343fqb4d47.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxCOQ7b8li34Y9wgBlNACPrzeW9_LQbC0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "860333091178-lcrs195oq715v9u2ps8qeu343fqb4d47.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      },
+      "admob_app_id": "ca-app-pub-3062657192063025~1116403640"
+    }
+  ],
+  "configuration_version": "1"
+}

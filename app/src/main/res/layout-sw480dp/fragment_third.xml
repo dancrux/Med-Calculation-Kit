@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/weight_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="@string/enter_number"
+        android:inputType="number|numberDecimal"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/edit_convert_from"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/convert_from"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        />
+    <TextView
+        android:id="@+id/W_unit_type"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/unit_type"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        />
+    <Spinner
+        android:id="@+id/sp_weight_convert_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="18dp"
+        android:textSize="20sp"
+
+        />
+
+    <TextView android:id="@+id/edit_convert_to"
+        android:layout_width="wrap_content"
+        android:text="@string/convert_to"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        />
+    <TextView
+        android:id="@+id/W_unit_type_2"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/unit_type"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+
+        />
+    <Spinner
+        android:id="@+id/sp_weight_convert_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+
+        />
+    <Button
+        android:id="@+id/button_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="14dp"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/weight_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textSize="22sp"
+        android:textIsSelectable="true"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+
+
+</LinearLayout>

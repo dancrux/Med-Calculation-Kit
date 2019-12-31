@@ -14,9 +14,9 @@
         android:title="@string/action_feedback"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_rate"
         android:orderInCategory="300"
-        android:title="@string/action_settings"
+        android:title="@string/action_rate"
         app:showAsAction="never" />
 
 </menu>

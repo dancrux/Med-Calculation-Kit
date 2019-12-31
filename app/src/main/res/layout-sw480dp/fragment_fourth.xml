@@ -1,237 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/table_chart"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableLayout
+
+        android:id="@+id/table_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:text="@string/bmi_value"
-            android:fontFamily="serif"
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:textColor="@color/colorPrimaryDark"
+        <TableRow>
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:text="@string/interpretation"
-            android:textIsSelectable="true"
-            android:fontFamily="serif"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:textColor="@color/colorPrimaryDark"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="serif"
+                android:text="@string/bmi_value"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.convertText"
+                android:textColor="@color/LightGreenYellow"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
 
-    </TableRow>
+                android:textStyle="bold" />
 
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="12dp"
-            android:textSize="16sp"
-            android:layout_marginStart="14dp"
-            android:text="@string/first"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="serif"
+                android:text="@string/interpretation"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.convertText"
+                android:textColor="@color/LightGreenYellow"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="12dp"
-            android:textSize="16sp"
-            android:layout_marginStart="10dp"
-            android:text="@string/severely_underweight"
+        </TableRow>
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:textSize="16sp"
-            android:layout_marginStart="14dp"
-            android:text="@string/second"
+        <TableRow>
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:textSize="16sp"
-            android:text="@string/very_underweight"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/first"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:textSize="16sp"
-            android:layout_marginStart="14dp"
-            android:text="@string/third"
+                android:textSize="16sp" />
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:text="@string/underweight"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/severely_underweight"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="14dp"
-            android:text="@string/fourth"
+                />
+        </TableRow>
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:text="@string/normal_weight"
+        <TableRow>
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="14dp"
-            android:text="@string/fifth"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/second"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:text="@string/over_weight"
+                android:textSize="16sp" />
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="14dp"
-            android:text="@string/sixth"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/very_underweight"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:text="@string/first_class_obese"
+                />
+        </TableRow>
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="14dp"
-            android:text="@string/seventh"
+        <TableRow>
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:text="@string/second_class_obese"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/third"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
 
-            />
-    </TableRow>
-    <TableRow>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="14dp"
-            android:text="@string/eight"
+                android:textSize="16sp" />
 
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height='wrap_content'
-            android:textIsSelectable="true"
-            android:textSize="16sp"
-            android:layout_marginTop="14dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginStart="11dp"
-            android:text="@string/third_class_obese"
-            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/underweight"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/fourth"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/normal_weight"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/fifth"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/over_weight"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/sixth"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/first_class_obese"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/seventh"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/second_class_obese"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/eight"
+                android:textColor="@color/blackGrey"
+                android:textIsSelectable="true"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height='wrap_content'
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/third_class_obese"
+                android:textIsSelectable="true"
+                android:textSize="16sp" />
 
 
-
-    </TableRow>
-
+        </TableRow>
 
 
-
-</TableLayout>
+    </TableLayout>
+    <com.startapp.android.publish.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/table_chart"
+        />
+</android.support.constraint.ConstraintLayout>

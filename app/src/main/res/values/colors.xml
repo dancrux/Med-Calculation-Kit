@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#e0e0e0</color>
+    <color name="colorPrimaryDark">#8c8c8c</color>
+    <color name="colorAccent">#338a3e</color>
+    <color name="secondaryLight">#FFFFFF</color>
+    <color name="secondaryDark">#FFEBEE</color>
+
+    <color name="secondary">#66BB6A</color>
+    <color name="sLight">#98ee99</color>
+    <color name="sDark">#338a3e</color>
+
+    <color name="primary">#b29ddb</color>
+    <color name="pLight">#e5ceff</color>
+    <color name="pDark">#826fa9</color>
+
+
+    <color name="s2Light">#FFEBEE</color>
+    <color name="s2Dark">#CCB9BC</color>
+
+
+
+    <color name="peach">#F5BCBA</color>
+    <color name="seaGreen">#67E6DC</color>
+    <color name="navyBlue">#30336B</color>
+    <color name="skyBlue">#74B9FF</color>
+    <color name="lightRed">#EC4849</color>
+    <color name="darkGreenYellow">#019031</color>
+    <color name="darkGreen">#218F76</color>
+    <color name="LightGreenYellow">#26AE60</color>
+    <color name="LightPurple">#8B78E6</color>
+    <color name="DarkPurple">#673AB7</color>
+
+    <color name="bluishAsh">#758AA2</color>
+    <color name="pluralSightOrange">#F05A28</color>
+    <color name="blackGrey">#2C3335</color>
+    <color name="darkGrey">#333945</color>
+    <color name="oldLace">#fdf5e6</color>
+    <color name="seaShell">#fff5ee</color>
+    <color name="LightViolet">#6600cc</color>
+    <color name="white">#ffffff</color>
+
+
+
+
+
 </resources>

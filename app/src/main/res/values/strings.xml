@@ -1,15 +1,19 @@
 <resources>
-    <string name="app_name">Crux Bmi Calc</string>
+    <string name="app_name">Med Calculation Kit</string>
     <string name="tab_text_1">BMI CALC</string>
     <string name="tab_text_2">LENGTH CONVERTER</string>
     <string name="tab_text_3">WEIGHT CONVERTER</string>
     <string name="tab_text_4">BMI CHART</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_rate">Rate</string>
     <string name="action_share">Share</string>
+    <string name="bmi_label">BmiCalc/Converter</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="share_text">Have you ever wondered what percentage of your total body weight is made of fat? with the Med Calculation Kit you can know this
+        and many more medical calculations in one simple click. It\'s more than an app \! https://play.google.com/store/apps/details?id=com.wordpress.cruxonlinedotblog.cruxbmicalc</string>
     <string name="convert_from">CONVERT FROM</string>
+    <string name="share_header">Share Med Calculation Kit With</string>
     <string name="convert_to">CONVERT TO</string>
     <string name="weight">Enter your Weight in Kg</string>
     <string name="height">Enter Your Height in Meters </string>
@@ -41,8 +45,7 @@
     <string name="third_class_obese"> Third Class Obese</string>
 
     <string name="action_feedback"> Feedback</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3062657192063025/1956387180</string>
-    <string name="interstitial_ad_unit_id">ca-app-pub-3062657192063025/2854777131</string>
+
     <string name="bmi_value"> BMI VALUE</string>
     <string name="interpretation"> INTERPRETATION</string>
 
@@ -54,6 +57,199 @@
     <string name="sixth"> 30 -35</string>
     <string name="seventh"> 35 -40</string>
     <string name="eight"> 40 and above</string>
+    <string name="bmi_converter">Bmi Calc and Converter</string>
+
+    <string name="respiratory">Respiratory System</string>
+    <string name="cardiovascular">Cardiovascular System</string>
+    <string name="renal">Renal Physiology</string>
+    <!--    <string name="title_activity_main">Home</string>-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_respiratory">Respiratory System</string>
+    <string name="menu_cardiovascular">Cardiovascular System</string>
+    <string name="menu_renal">Renal Physiology</string>
+    <string name="menu_bmi">Bmi Calc and Converter</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_feedback">Feedback</string>
+
+    <string name="nav_group_goTo">Go To</string>
+    <string name="rate">Rate App</string>
+    <string name="nav_group_communicate">Communicate</string>
+    <string name="splash_text">Your Sure Bet For Medical Calculations</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">Med Calc</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="action_settings">Settings</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_respiratory">Respiratory System</string>
+    <string name="nav_header_title">@string/app_name</string>
+    <string name="title_activity_cardiovascular">Cardiovascular System</string>
+    <string name="title_activity_renal">Renal Physiology</string>
+    <string name="title_activity_bmi">Bmi Calc and Converter</string>
+    <string name="systolic_hint">Systolic Pressure</string>
+    <string name="diastolic_hint">Diastolic Pressure</string>
+    <string name="map_text">Mean Arterial Pressure</string>
+    <string name="pulse_text">Pulse Pressure</string>
+    <string name="heart_rate_text">Heart Rate</string>
+    <string name="stroke_vol_text">Stroke Volume</string>
+    <string name="cardiac_output_text">Cardiac Output</string>
+    <string name="blood_pressure_text">Blood Pressure</string>
+    <string name="peripheral_resistance_text">Peripheral Resistance</string>
+
+    <string name="lean_body_mass">Lean Body Mass</string>
+    <string name="title_activity_lean_mass">Lean Body Mass</string>
+    <string name="gender_text">Gender</string>
+    <string name="age_text">Age 14 or younger</string>
+    <string name="height_text">Height</string>
+    <string name="weight_text">Weight</string>
+    <string name="calculate_lbm">Calculate LBM</string>
+    <string name="hint_cm">Cm</string>
+    <string name="kg_hint">Kg</string>
+    <string name="male_text">Male</string>
+    <string name="female_text">Female</string>
+    <string name="no_text">No</string>
+    <string name="yes_text">Yes</string>
+    <string name="clearance_btn_text">Clearance</string>
+    <string name="rbf_text_btn">Total RBF</string>
+    <string name="ux_text">Ux</string>
+    <string name="vol_text">Vol</string>
+    <string name="px_text">Px</string>
+    <string name="rpf_text">RPF/Cx</string>
+    <string name="hct_text">Hematocrit</string>
+
+    <string name="cardiovascular_system_text">Systemic Vascular Resistance(Peripheral resistance)
+        reflects the resistance across the whole of the systemic circulation (from aorta to right atrium).\n
+        As an individual ages the systolic pressure increases more than the diastolic pressure\n\n
+        The Mean Arterial Pressure(MAP) is the mean pressure that moves blood to the tissues.\n
+        Mean Arterial Pressure is closer to diastolic pressure than to systolic pressure because diastole lasts longer than systole.
+        \n Mean Arterial Pressure is obtained by adding one third of the pulse pressure to the diastolic pressure.
+        \n\n Pulse Pressure is the difference between systolic and diastolic pressure.\n\n
+        Cardiac Output is defined as the quantity of blood ejected per minute by each ventricle.\n In a healthy heart this
+        value is same for right and left ventricles.\n Cardiac Output can be said to be equal to Stroke Volume
+        multiplied by heart rate.
+
+    </string>
+    <string name="renal_system_text1">Cx = Clearance of Substance X.\n
+        Ux = Concentration of Substance X.\n Px = Plasma Concentration of the Substance X in mg per ml of Plasma.
+        \n Vol = Volume of Urine Produced Per Minute.\n Rpf= Renal Plasma Flow </string>
+
+    <string name="renal_system_text2">Renal Clearance\n is the net result of three interrelated
+        processes: glomerular filtration, tubular secretion and tubular reabsorption.\n\n
+    The renal clearance of a substance is the volume of plasma that the kidneys completely
+        clear of that drug per unit of time.\n\n Glomerular Filtration Rate(GFR) is the volume of fluid
+        filtered from the renal(kidney) capillaries into the Bowmans capsule per unit time.\n
+    GFR is equal to the clearance rate when any solute is freely filtered and is neither reabsorbed
+        by the kidneys.\n GFR can be determined by injecting inulin or sinistrin(inulin-analog)
+        into the plasma.\n GFR can be accurately measured using radioactive substances
+        (chromium-51 and technetium-99m)\n\n Renal Blood Flow(RBF)\n Renal blood flow is the volume
+        of blood delivered to the kidneys per unit time.\n The Kidneys together receive about 25% 0f cardiac output
+        , amounting to 1.2-1.2L/min in a 70kg adult male.
+        \n\n Renal Plasma Flow (RPF): is the volume of plasma that reaches the kidneys per unit time.
+        \n Renal plasma flow is first determined in order to measure Renal blood flow.
+        \n\n\nSources\n wikipedia.org
+    </string>
+
+ >
+
+    <string name="lean_mass_text">Lean Body Mass (LBM) is a part of body composition that is defined
+        as the difference between total body weight and body fat weigh.\n This means that it counts
+        the mass of all organs except body fat, including bones, muscles, blood,skin, and everything else.
+        \n While the percentage of LBM is usually not computed, on average it ranges between 60-90% of
+        total body weight.\n\n Generally men have a higher proportion of LBM than women do.\n Dosages
+        of some anesthetic agents, particularly water-soluble drugs are routinely based on the LBM.
+        Some medical exams also use the LBM values.\n Several formulas have been developed for calculating estimated LBM(eLBM)
+        \n\n  Lean Body Mass Formula for Adults\n
+        The Boer Formula:1\n
+        For males:\n
+        eLBM = 0.407W + 0.267H - 19.2\n
+        For females:\n
+        eLBM = 0.252W + 0.473H - 48.3\n
+        The James Formula:2\n
+        For males:\n
+        eLBM = 1.1W - 128(	W/H)2\n
+        For females:\n
+        eLBM = 1.07W - 148(	W/H)2\n
+        The Hume Formula:3\n
+        For males:\n
+        eLBM = 0.32810W + 0.33929H - 29.5336\n
+        For females:\n
+        eLBM = 0.29569W + 0.41813H - 43.2933\n\n
+        This app was made using the Humes formula for individuals above 14 years and the Peters
+        formula for individuals below 14 years. \n
+        In the formulas above, W is the body weight in kilogram and H is the body height in centimeter.\n
+        Lean Body Mass Formula for Children\n
+        The Peters Formula:\n
+        The author suggests that this formula is applicable for children aged 13-14 years old or younger.\n
+        The formula is used to compute an eLBM based on an estimated extracellular volume (eECV) as follows:\n
+        eECV = 0.0215·W0.6469·H0.7236\n
+        eLBM = 3.8·eECV\n\n
+        Sources\n
+        1.	Boer P. "Estimated lean body mass as an index for normalization of body fluid volumes in man." Am J Physiol 1984; 247: F632-5\n
+        2.	James, W. "Research on obesity: a report of the DHSS/MRC group" HM Stationery Office 1976\n
+        3.	Hume, R "Prediction of lean body mass from height and weight.". J Clin Pathol. 1966 Jul; 19(4):389-91.\n
+        4.	A. M. Peters, H. L. R. Snelling, D. M. Glass, N. J. Bird "Estimation of lean body mass in children".\n
+        British Journal of Anaesthesia1 06(5): 719-23 (2011).
+
+    </string>
+
+    <string name="respiratory_system_text">LUNG VOLUMES\n  •	Tidal Volume(TV)\n It is the amount of air that can be inhaled or exhaled during one respiratory cycle.
+        This depicts the functions of the respiratory centres, respiratory muscles and the mechanics of the lung and chest wall.\n\n
+        The normal adult value is 10% of vital capacity (VC),
+        approximately 300-500ml (6‐8 ml/kg); but can increase up to 50% of VC on exercise\n\n •	Inspiratory Reserve Volume(IRV)\n
+        It is the amount of air that can be forcibly inhaled after a normal tidal volume.IRV is usually kept in reserve,
+        but is used during deep breathing. The normal adult value is 1900-3300ml.\n\n
+        •	Expiratory Reserve Volume(ERV)\n
+        It is the volume of air that can be exhaled forcibly after exhalation of normal tidal volume.
+        The normal adult value is 700-1200ml. ERV is reduced with obesity, ascites or after upper abdominal surgery\n\n
+        •	Residual Volume(RV)\n It is the volume of air remaining in the lungs after maximal exhalation. Normal adult value is averaged at 1200ml(20‐25 ml/kg).
+        It is indirectly measured from summation of FRC and ERV and cannot be measured by spirometry.\n\n
+        In obstructive lung diseases with features of incomplete emptying of the lungs and air trapping, RV may be significantly high.
+        The RV can also be expressed as a percentage of total lung capacity and values in excess of 140% significantly increase the risks of barotrauma, pneumothorax,
+        infection and reduced venous return due to high intra thoracic pressures as noticed in patients
+        with high RV who require surgery and mechanical ventilation thus needs high peri-operative inflation pressures.\n\n Lung volumes also known as respiratory volumes,
+        refers to the volume of gas in the lungs at a given time during the respiratory cycle.
+        Lung capacities are derived from a summation of different lung volumes.
+        The average total lung capacity of an adult human male is about 6 litres of air.
+        Lung volumes measurement is an integral part of pulmonary function test. These volumes vary,
+        depending on the depth of respiration, ethnicity, gender, age, body composition and in certain respiratory diseases.
+        A number of the lung volumes can be measured by Spirometry- Tidal volume, Inspiratory reserve volume, and Expiratory reserve volume.
+        However, measurement of Residual volume, Functional residual capacity, and Total lung capacity is through body plethysmography,
+        nitrogen washout and helium dilution technique.\n\n LUNG CAPACITIES\n •	Inspiratory capacity(IC)\n
+        It is the maximum volume of air that can be inhaled following a resting state.
+        It is calculated from the sum of inspiratory reserve volume and tidal volume. IC = IRV+TV\n\n
+        •	Total Lung Capacity(TLC)\n It is the maximum volume of air the lungs can accommodate or sum of all volume compartments or volume of air in lungs after maximum inspiration.
+        The normal value is about 6,000mL(4‐6 L). TLC is calculated by summation of the four primary lung volumes (TV, IRV, ERV, RV).\n
+        TLC may be increased in patients with obstructive defects such as emphysema and decreased in patients with restrictive abnormalities including chest wall abnormalities and kyphoscoliosis
+        \n\n •	Vital Capacity(VC)\n It is the total amount of air exhaled after maximal inhalation.
+        The value is about 4800mL and it varies according to age and body size.
+        It is calculated by summing tidal volume, inspiratory reserve volume, and expiratory reserve volume. VC = TV+IRV+ERV.\n
+        VC indicates ability to breathe deeply and cough, reflecting inspiratory and expiratory muscle strength.VC should be 3 times greater than TV for effective cough.
+        VC is sometimes reduced in obstructive disorders and always in restrictive disorders\n\n
+        •	Function Residual Capacity(FRC)\n It is the amount of air remaining in the lungs at the end of a normal exhalation.
+        It is calculated by adding together residual and expiratory reserve volumes. The normal value is about 1800 – 2200 mL. FRC = RV+ERV.
+        \n\n It is the amount of air remaining in the lungs at the end of a normal exhalation.
+        It is calculated by adding together residual and expiratory reserve volumes. The normal value is about 1800 – 2200 mL. FRC = RV+ERV.
+
+
+ </string>
+    <string name="tv_hint">TV</string>
+    <string name="irv_hint">IRV</string>
+    <string name="erv_hint">ERV</string>
+    <string name="vc_btn_text">Vital Capacity</string>
+    <string name="rv_hint">RV</string>
+    <string name="frc_hint">FRC</string>
+    <string name="frc_btn_text">Calculate FRC</string>
+    <string name="ic_btn_text">Calculate IC</string>
+    <string name="rv_btn_text">Calculate RV</string>
 
     <string-array name="length_units">
         <item>Meters</item>
@@ -64,18 +260,12 @@
         <item>Millimeters</item>
         <item>Yards</item>
         <item>Miles</item>
-
-
     </string-array>
-
     <string-array name="weight_units">
         <item>Kilogram</item>
         <item>Gram</item>
         <item>Tonnes</item>
         <item>Pounds</item>
-
-
-
     </string-array>
 
 </resources>

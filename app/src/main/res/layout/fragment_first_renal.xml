@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FirstRenalFragment">
+
+    <Button
+        android:id="@+id/clearanceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/clearance_btn_text"
+        android:textColor="@color/LightGreenYellow"
+        app:layout_constraintEnd_toStartOf="@+id/clearanceResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pxText" />
+
+    <Button
+        android:id="@+id/rbfBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/rbf_text_btn"
+        android:textColor="@color/LightGreenYellow"
+        app:layout_constraintEnd_toStartOf="@+id/rbfResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rpfText" />
+
+    <EditText
+        android:id="@+id/volText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="@string/vol_text"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/uxText"
+        app:layout_constraintTop_toTopOf="@+id/uxText" />
+
+    <EditText
+        android:id="@+id/pxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:hint="@string/px_text"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/volText"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/uxText"
+        app:layout_constraintTop_toBottomOf="@+id/uxText" />
+
+    <EditText
+        android:id="@+id/uxText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:ems="8"
+        android:hint="@string/ux_text"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/volText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/rpfText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="8"
+        android:hint="@string/rpf_text"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/hctText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <EditText
+        android:id="@+id/hctText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="@string/hct_text"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rpfText"
+        app:layout_constraintTop_toTopOf="@+id/rpfText" />
+
+    <TextView
+        android:id="@+id/clearanceResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/clearanceBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/clearanceBtn"
+        app:layout_constraintTop_toTopOf="@+id/clearanceBtn" />
+
+    <TextView
+        android:id="@+id/rbfResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rbfBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rbfBtn"
+        app:layout_constraintTop_toTopOf="@+id/rbfBtn" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clearanceBtn" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbfBtn" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/renal_system_text1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/divider2" />
+
+    <com.startapp.android.publish.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="45dp"
+        android:gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView5" />
+
+</android.support.constraint.ConstraintLayout>

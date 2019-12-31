@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FirstLeanFragment">
+
+    <Button
+        android:id="@+id/ibmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/calculate_lbm"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.convertText"
+        app:layout_constraintEnd_toEndOf="@+id/weightText"
+        app:layout_constraintStart_toStartOf="@+id/weightTextView"
+        app:layout_constraintTop_toBottomOf="@+id/weightTextView" />
+
+    <EditText
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/kg_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/weightTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/weightTextView"
+        app:layout_constraintTop_toTopOf="@+id/weightTextView" />
+
+    <EditText
+        android:id="@+id/heightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/hint_cm"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/heightTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/heightTextView"
+        app:layout_constraintTop_toTopOf="@+id/heightTextView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/ageTextView"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup2"
+        app:layout_constraintStart_toEndOf="@+id/ageTextView"
+        app:layout_constraintTop_toTopOf="@+id/ageTextView">
+
+        <RadioButton
+            android:id="@+id/yesRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/yes_text"
+            android:textColor="@color/LightGreenYellow"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/noRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_text"
+            android:textColor="@color/LightGreenYellow"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/gendetTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/gendetTextView"
+        app:layout_constraintTop_toTopOf="@+id/gendetTextView">
+
+        <RadioButton
+            android:id="@+id/maleRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/male_text"
+            android:textColor="@color/LightGreenYellow"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/femaleRadioBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/female_text"
+            android:textColor="@color/LightGreenYellow"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/gendetTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/gender_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ibmResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/DarkPurple"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ibmButton"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="@+id/ibmButton"
+        app:layout_constraintTop_toBottomOf="@+id/ibmButton" />
+
+    <TextView
+        android:id="@+id/bodyfatTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/DarkPurple"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/lbmPercentageText"
+        app:layout_constraintStart_toStartOf="@+id/lbmPercentageText"
+        app:layout_constraintTop_toBottomOf="@+id/lbmPercentageText" />
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/age_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup3"
+        app:layout_constraintStart_toStartOf="@+id/gendetTextView"
+        app:layout_constraintTop_toBottomOf="@+id/gendetTextView" />
+
+    <TextView
+        android:id="@+id/lbmPercentageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/LightGreenYellow"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/ibmResult"
+        app:layout_constraintStart_toStartOf="@+id/ibmResult"
+        app:layout_constraintTop_toBottomOf="@+id/ibmResult" />
+
+    <TextView
+        android:id="@+id/heightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="@string/height_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/heightText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+
+    <TextView
+        android:id="@+id/weightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/weight_text"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/weightText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heightTextView" />
+
+    <com.startapp.android.publish.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bodyfatTextView" />
+
+</android.support.constraint.ConstraintLayout>

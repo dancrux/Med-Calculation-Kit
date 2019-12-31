@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.wordpress.cruxonlinedotblog.cruxbmicalc.R;
 
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 
 
@@ -63,21 +64,24 @@ public class SecondFragment extends Fragment  {
                 }else{
                     int index1 = sp_convert_from.getSelectedItemPosition();
                     int index2 = sp_convert_to.getSelectedItemPosition();
-                    float value = Float.parseFloat(length_quantity.getText().toString());
+                    double value = Double.parseDouble(length_quantity.getText().toString());
 
 
-                    float  ratio[] = {1.0f, 100f, 0.001f, 39.37f, 3.281f, 1000f, 1.093613f, 0.0006214f};
-                    float  result = value / ratio[index1] * ratio[index2];
+                    double  ratio[] = {1.0d, 100d, 0.001d, 39.37d, 3.281d, 1000d, 1.093613d, 0.0006214d};
+                    double  result = value / ratio[index1] * ratio[index2];
+                    showResult(result);
 
-
-
-
-
-
-                    length_result.setText(result + "");
 
                 }
 
+            }
+
+            private void showResult(double result) {
+                String displayResult ,formattedValue;
+                DecimalFormat df = new DecimalFormat(".##");
+                formattedValue = df.format(result);
+                displayResult = formattedValue;
+                length_result.setText(displayResult);
             }
         });
         return rootView;

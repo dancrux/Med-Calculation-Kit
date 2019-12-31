@@ -1,105 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
     <!-- TODO: Update blank fragment layout -->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="14dp"
-            android:layout_marginTop="22dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimaryDark"
-            android:text="@string/weight"
-            android:textSize="24sp"
-            />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:text="@string/weight"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.convertText"
+        android:textColor="@color/LightGreenYellow"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/weight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:ems="6"
-            android:hint="@string/kg"
-            android:inputType="number|numberDecimal"
-            android:textSize="20sp"
-            />
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:hint="@string/kg"
+        android:inputType="number|numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:gravity="center_horizontal"
-            android:text="@string/height"
-            android:textSize="24sp"
-            />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="@string/height"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.convertText"
+        android:textColor="@color/LightGreenYellow"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
 
-        <EditText
-            android:id="@+id/height"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:ems="6"
-            android:hint="@string/m"
-            android:inputType="number|numberDecimal"
-            android:textSize="20sp"
-            />
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="6"
+        android:hint="@string/m"
+        android:inputType="number|numberDecimal"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
-        <Button
-            android:id="@+id/calc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:textSize="22sp"
-            android:textColor="@color/colorPrimaryDark"
-            android:text="@string/calc_bmi"
-            />
+    <Button
+        android:id="@+id/calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/calc_bmi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/LightGreenYellow"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/height"
+        app:layout_constraintVertical_bias="0.347" />
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="210dp"
-            android:layout_height="124dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="18dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="6dp"
-            android:textStyle="bold|italic"
-            android:textIsSelectable="true"
-            android:gravity="center_horizontal"
-            android:textSize="26sp"
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="124dp"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
 
-            />
+        android:textIsSelectable="true"
+        android:textSize="22sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc" />
+
+    <com.startapp.android.publish.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="bottom|center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/result" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
 
 
 

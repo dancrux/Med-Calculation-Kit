@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:color="@color/pluralSightOrange"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+    </group>
+
+    <!--<group android:checkableBehavior="single">-->
+
+
+
+    <item android:title="@string/nav_group_goTo">
+        <menu>
+
+            <item
+                android:id="@+id/nav_bmi"
+                android:color="@color/LightPurple"
+                android:icon="@drawable/ic_local_pharmacy_black_24dp"
+                android:title="@string/menu_bmi" />
+            <item
+                android:id="@+id/nav_respiratory"
+                android:icon="@drawable/ic_local_pharmacy_black_24dp"
+                android:title="@string/menu_respiratory" />
+            <item
+                android:id="@+id/nav_cardiovascular"
+                android:icon="@drawable/ic_local_pharmacy_black_24dp"
+                android:title="@string/menu_cardiovascular" />
+            <item
+                android:id="@+id/nav_renal"
+                android:icon="@drawable/ic_local_pharmacy_black_24dp"
+                android:title="@string/menu_renal" />
+            <item
+                android:id="@+id/nav_leanMass"
+                android:icon="@drawable/ic_local_pharmacy_black_24dp"
+                android:title="@string/lean_body_mass" />
+        </menu>
+
+    </item>
+
+
+    <item android:title="@string/nav_group_communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_rate"
+                android:icon="@android:drawable/star_big_on"
+                android:title="@string/rate" />
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="@string/menu_feedback" />
+
+
+        </menu>
+    </item>
+    <group />
+</menu>

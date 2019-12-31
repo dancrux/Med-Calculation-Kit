@@ -1,4 +1,5 @@
 <resources>
+    xmlns:tools="http://schemas.android.com/tools"
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -6,6 +7,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+
+
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -13,7 +17,38 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!--Activities style-->
+    <style name="AppTheme.SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="GreenTheme" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/LightGreenYellow</item>
+        <item name="colorPrimaryDark">@color/darkGreenYellow</item>
+        <item name="colorAccent">@color/LightPurple</item>
+    </style>
+
+    <style name="PurpleTheme" parent="AppTheme.NoActionBar">
+        <item name="colorPrimary">@color/LightPurple</item>
+        <item name="colorPrimaryDark">@color/DarkPurple</item>
+        <item name="colorAccent">@color/LightGreenYellow</item>
+    </style>
+
+    <!--Text style-->
+    <style name="TextAppearance.AppCompat.Medium.convertText">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/darkGreenYellow</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <item name="android:textColorPrimary">@color/blackGrey</item>
+        <item name="android:textColorSecondary">@color/blackGrey</item>
+    </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 

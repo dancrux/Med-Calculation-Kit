@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.FirstRespiratoryFragment">
+
+    <Button
+        android:id="@+id/icBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ic_btn_text"
+        android:textColor="@color/LightGreenYellow"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/icResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/irvText2" />
+
+    <Button
+        android:id="@+id/frcBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frc_btn_text"
+        android:textColor="@color/LightGreenYellow"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/frcResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvText" />
+
+    <Button
+        android:id="@+id/vcBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/vc_btn_text"
+        android:textColor="@color/LightGreenYellow"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/vcResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ervText" />
+
+    <Button
+        android:id="@+id/rvBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rv_btn_text"
+        android:textColor="@color/LightGreenYellow"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/rvResult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frcText" />
+
+    <EditText
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="8"
+        android:hint="@string/tv_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/irvText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/irvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="@string/irv_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/tvText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvText"
+        app:layout_constraintTop_toTopOf="@+id/tvText" />
+
+    <EditText
+        android:id="@+id/ervText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="9"
+        android:hint="@string/erv_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/irvText"
+        app:layout_constraintStart_toStartOf="@+id/tvText"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+    <EditText
+        android:id="@+id/rvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="8"
+        android:hint="@string/rv_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/ervText2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <EditText
+        android:id="@+id/ervText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="@string/erv_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/rvText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rvText"
+        app:layout_constraintTop_toTopOf="@+id/rvText" />
+
+    <EditText
+        android:id="@+id/irvText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="8"
+        android:hint="@string/irv_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/tvText2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider7" />
+
+    <EditText
+        android:id="@+id/tvText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="@string/tv_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/irvText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/irvText2"
+        app:layout_constraintTop_toTopOf="@+id/irvText2" />
+
+    <EditText
+        android:id="@+id/frcText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="8"
+        android:hint="@string/frc_hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/ervText3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+    <EditText
+        android:id="@+id/ervText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="8"
+        android:hint="@string/erv_hint"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/frcText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frcText"
+        app:layout_constraintTop_toTopOf="@+id/frcText" />
+
+    <TextView
+        android:id="@+id/vcResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/vcBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/vcBtn"
+        app:layout_constraintTop_toTopOf="@+id/vcBtn" />
+
+    <TextView
+        android:id="@+id/frcResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/frcBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/frcBtn"
+        app:layout_constraintTop_toTopOf="@+id/frcBtn" />
+
+    <TextView
+        android:id="@+id/icResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/icBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icBtn"
+        app:layout_constraintTop_toTopOf="@+id/icBtn" />
+
+    <TextView
+        android:id="@+id/rvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rvBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rvBtn"
+        app:layout_constraintTop_toTopOf="@+id/rvBtn" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vcBtn" />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="13dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frcBtn" />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icBtn" />
+</android.support.constraint.ConstraintLayout>

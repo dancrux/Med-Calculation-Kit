@@ -1,224 +1,227 @@
 package com.wordpress.cruxonlinedotblog.cruxbmicalc.activity;
 
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.TabLayout;
-
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.support.v4.view.ViewPager;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
+import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.GravityCompat;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.navigation.ui.AppBarConfiguration;
+
+import android.support.design.widget.NavigationView;
+import android.support.v4.widget.DrawerLayout;
+
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.widget.Toast;
 
-
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
-import com.wordpress.cruxonlinedotblog.cruxbmicalc.Adapters.ViewPagerAdapter;
-import com.wordpress.cruxonlinedotblog.cruxbmicalc.Fragments.FirstFragment;
-import com.wordpress.cruxonlinedotblog.cruxbmicalc.Fragments.FourthFragment;
-import com.wordpress.cruxonlinedotblog.cruxbmicalc.Fragments.SecondFragment;
-import com.wordpress.cruxonlinedotblog.cruxbmicalc.Fragments.ThirdFragment;
+import com.startapp.android.publish.ads.banner.Banner;
+import com.startapp.android.publish.ads.splash.SplashConfig;
+import com.startapp.android.publish.adsCommon.Ad;
+import com.startapp.android.publish.adsCommon.AutoInterstitialPreferences;
+import com.startapp.android.publish.adsCommon.StartAppAd;
+import com.startapp.android.publish.adsCommon.StartAppSDK;
+import com.startapp.android.publish.adsCommon.adListeners.AdDisplayListener;
+import com.startapp.android.publish.adsCommon.adListeners.AdEventListener;
 import com.wordpress.cruxonlinedotblog.cruxbmicalc.R;
 
+import org.w3c.dom.Text;
 
-public class MainActivity  extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+    private CardView respiratoryCard, cardiovascularCard, renalCard, bmiCalcCard,leanMassCard;
 
-    private InterstitialAd interstitial;
+    private StartAppAd startAppAd = new StartAppAd(this);
 
-    private AdView adView;
-
-    @Override
-    public void onBackPressed() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setMessage("Are You Sure You Want To Exit ?");
-        builder.setCancelable(true);
-        builder.setNegativeButton("NO!", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
-            }
-        });
-        builder.setPositiveButton("YES!", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                finish();
-            }
-        });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-
-
-    }
-
-
-
+    private AppBarConfiguration mAppBarConfiguration;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        StartAppSDK.init(this, "202986230", true);
+//        StartAppAd.enableAutoInterstitial();
+//        StartAppAd.setAutoInterstitialPreferences(
+//                new AutoInterstitialPreferences()
+//                        .setSecondsBetweenAds(120)
+//                        .setActivitiesBetweenAds(3)
+//        );
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.activity_main1);
 
-        //setting up the viewpager view
-        TabLayout tabLayout = findViewById(R.id.tab);
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+//        Banner banner = (com.startapp.android.publish.ads.banner.Banner) findViewById(R.id.startAppBanner);
+//        banner.showBanner();
+        CardView bmiCalcCard = findViewById(R.id.bmi_calc_card);
 
-        //Adding Fragments
-        adapter.AddFragment(new FirstFragment(), "BMI CALC");
-        adapter.AddFragment(new SecondFragment(), "LENGTH CONVERTER");
-        adapter.AddFragment(new ThirdFragment(), "WEIGHT CONVERTER");
-        adapter.AddFragment(new FourthFragment(), "BMI CHART SUMMARY");
+        CardView respiratoryCard = findViewById(R.id.respiratoryCard);
+        CardView cardiovascularCard = findViewById(R.id.cardiovascularCard);
+        CardView renalCard = findViewById(R.id.renal_card);
+        CardView leanMassCard = findViewById(R.id.leanMassCard);
 
-        //Adapter Setup
-        viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
-
-
-// Prepare the Interstitial Ad
-        interstitial = new InterstitialAd(MainActivity.this);
-// Insert the Ad Unit ID
-        interstitial.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-
-        interstitial.loadAd(new AdRequest.Builder().build());
-
-
-
-
-// Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this, "ca-app-pub-3062657192063025~1116403640");
-
-        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
-        // values/strings.xml.
-        adView = findViewById(R.id.ad_view);
-
-        // Create an ad request. Check your logcat output for the hashed device ID to
-        // get test ads on a physical device. e.g.
-        // "Use AdRequest.Builder.addTestDevice() to get test ads on this device."
-        AdRequest adRequest = new AdRequest.Builder().build();
-
-        // Start loading the ad in the background.
-        adView.loadAd(adRequest);
-
-        adView.setAdListener(new AdListener() {
+        bmiCalcCard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
+            public void onClick(View view) {
+                openBmiCalc();
+
             }
-
+        });
+        respiratoryCard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAdFailedToLoad(int errorCode) {
-                Log.d("ADMOB_ERROR_CODE","admob error code:"+ errorCode);
-                // Code to be executed when an ad request fails.
+            public void onClick(View view) {
+                openRespiratory();
             }
-
+        });
+        cardiovascularCard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
-            }
+            public void onClick(View view) {
+                startAppAd.showAd(new AdDisplayListener() {
+                    @Override
+                    public void adHidden(Ad ad) {
+                        startActivity(new Intent(MainActivity.this,CardiovascularActivity.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
-            @Override
-            public void onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
+                    }
 
-            @Override
-            public void onAdClosed() {
-                // Code to be executed when when the user is about to return
-                // to the app after tapping on an ad.
+                    @Override
+                    public void adDisplayed(Ad ad) {
+
+                    }
+
+                    @Override
+                    public void adClicked(Ad ad) {
+
+                    }
+
+                    @Override
+                    public void adNotDisplayed(Ad ad) {
+                        startActivity(new Intent(MainActivity.this,CardiovascularActivity.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+                    }
+                });
+
+//                startActivity(new Intent(MainActivity.this,CardiovascularActivity.class));
+//                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//                startAppAd.showAd();
             }
         });
 
-
-        interstitial.setAdListener(new AdListener() {
-
+        renalCard.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAdOpened() {
-                // Code to be executed when an ad opens an overlay that
-                // covers the screen.
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this ,RenalActivity.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+            }
+        });
+        leanMassCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startAppAd.showAd(new AdDisplayListener() {
+                    @Override
+                    public void adHidden(Ad ad) {
+                        startActivity(new Intent(MainActivity.this , LeanMassActivity.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+                    }
+
+                    @Override
+                    public void adDisplayed(Ad ad) {
+
+                    }
+
+                    @Override
+                    public void adClicked(Ad ad) {
+
+                    }
+
+                    @Override
+                    public void adNotDisplayed(Ad ad) {
+                        startActivity(new Intent(MainActivity.this , LeanMassActivity.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+                    }
+                });
+
+
+
             }
 
-            @Override
-            public void onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
+        });
 
-            @Override
-            public void onAdLoaded() {
 
-                // Code to be executed when an ad finishes loading.
-            }
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAdFailedToLoad(int errorCode) {
-                Log.d("INTERSTITIAL_ERROR"," interstitial error code:"+ errorCode);
-                // Code to be executed when an ad request fails.
-            }
-
-            @Override
-            public void onAdClosed() {
-    super.onAdClosed();
-                Intent Email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
-                Email.setType("message/rfc822");
+            public void onClick(View view) {
+                Intent Email = new Intent(Intent.ACTION_SENDTO);
+                Email.setData(Uri.parse("mailto:"));
+//            Email.setType("message/rfc822");
                 Email.putExtra(Intent.EXTRA_EMAIL,
                         new String[]{"thecruxrepublic@gmail.com"});  //developer 's email//
                 Email.putExtra(Intent.EXTRA_SUBJECT,
                         "FEEDBACK"); // Email 's Subject
-                Email.putExtra(Intent.EXTRA_TEXT, "Dear Admin," + "");  //Email 's Greeting text//
-                try {
-                    startActivity(Intent.createChooser(Email, "Send Feedback From:"));
-                } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(MainActivity.this, "No email client installed.", Toast.LENGTH_LONG).show();
+//            Email.putExtra(Intent.EXTRA_TEXT, "Dear Admin," + "");  //Email 's Greeting text//
+                if (Email.resolveActivity(getPackageManager())!=null){
+                    startActivity(Intent.createChooser(Email, "Send Feedback From"));
+                }else{
+                    Toast.makeText(MainActivity.this,"No email client Installed.", Toast
+                    .LENGTH_SHORT).show();
                 }
-interstitial.loadAd(new AdRequest.Builder().build());
+//            try {
+//                startActivity(Intent.createChooser(Email, "Send Feedback From:"));
+//            } catch (android.content.ActivityNotFoundException ex) {
+//                Toast.makeText(BmiActivity.this, "No email client installed.", Toast.LENGTH_LONG).show();
+//            }
             }
+
         });
 
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer,
+                toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        NavigationView navigationView =findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        Menu menu =navigationView.getMenu();
+        menu.findItem(R.id.nav_home).setChecked(true);
 
-                if (interstitial.isLoaded()) {
-                    interstitial.show();
-
-                }else {
-                    Intent Email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
-                    Email.setType("message/rfc822");
-                    Email.putExtra(Intent.EXTRA_EMAIL,
-                            new String[]{"thecruxrepublic@gmail.com"});  //developer 's email//
-                    Email.putExtra(Intent.EXTRA_SUBJECT,
-                            "FEEDBACK"); // Email 's Subject
-                    Email.putExtra(Intent.EXTRA_TEXT, "Dear Admin," + "");  //Email 's Greeting text//
-                    try {
-                        startActivity(Intent.createChooser(Email, "Send Feedback From:"));
-                    } catch (android.content.ActivityNotFoundException ex) {
-                        Toast.makeText(MainActivity.this, "No email client installed.", Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-        });
-
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+//        mAppBarConfiguration = new AppBarConfiguration.Builder(
+//                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
+//                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
+//                .setDrawerLayout(drawer)
+//                .build();
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+//        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+//        NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    private void openRespiratory() {
+        startActivity(new Intent(MainActivity.this, RespiratoryActivity.class));
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+    }
 
-
-
+    public void openBmiCalc(){
+        Intent bmiIntent = new Intent(this, BmiActivity.class);
+        startActivity(bmiIntent);
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -228,79 +231,159 @@ interstitial.loadAd(new AdRequest.Builder().build());
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                return true;
 
             case R.id.action_share:
                 Intent menuShare = new Intent(Intent.ACTION_SEND);
 
                 menuShare.setType("text/plain");
 
+                menuShare.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_text));
 
-                menuShare.putExtra(Intent.EXTRA_TEXT, "Know Your Bmi..Stay Healthy.. " +
-                        "Get The Crux BmiCalc With a Length and Weight Unit Converter  Today ..Google playStore...https://play.google.com/store/apps/details?id=com.wordpress.cruxonlinedotblog.cruxbmicalc");
-
-                startActivity(Intent.createChooser(menuShare, "Share Crux BmiCalc With"));
+                startActivity(Intent.createChooser(menuShare, getString(R.string.share_header)));
                 return true;
             case R.id.action_feedback:
-                Intent Email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
-                Email.setType("message/rfc822");
+                Intent Email = new Intent(Intent.ACTION_SENDTO);
+                Email.setData(Uri.parse("mailto:"));
+//            Email.setType("message/rfc822");
                 Email.putExtra(Intent.EXTRA_EMAIL,
                         new String[]{"thecruxrepublic@gmail.com"});  //developer 's email//
                 Email.putExtra(Intent.EXTRA_SUBJECT,
                         "FEEDBACK"); // Email 's Subject
-                Email.putExtra(Intent.EXTRA_TEXT, "Dear Admin," + "");  //Email 's Greeting text//
-                try {
-                    startActivity(Intent.createChooser(Email, "Send Feedback From:"));
-                } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(MainActivity.this, "No email client installed.", Toast.LENGTH_LONG).show();
+//            Email.putExtra(Intent.EXTRA_TEXT, "Dear Admin," + "");  //Email 's Greeting text//
+                if (Email.resolveActivity(getPackageManager())!=null){
+                    startActivity(Intent.createChooser(Email, "Send Feedback From"));
+                }else{
+                    Toast.makeText(MainActivity.this,"No email client Installed.", Toast
+                            .LENGTH_SHORT).show();
                 }
+//            try {
+//                startActivity(Intent.createChooser(Email, "Send Feedback From:"));
+//            } catch (android.content.ActivityNotFoundException ex) {
+//                Toast.makeText(BmiActivity.this, "No email client installed.", Toast.LENGTH_LONG).show();
+//            }
                 return true;
+            case R.id.action_rate:
+                rateApp();
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
-
-
-    /** Called when leaving the activity */
     @Override
-    public void onPause() {
-        if (adView != null) {
-            adView.pause();
+    public void onBackPressed() {
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setMessage("If You Enjoyed The App Please Leave a Rating At The Play Store. \n\n" +
+                    "Do You Want To Exit ?");
+            builder.setCancelable(true);
+            builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.cancel();
+                }
+            });
+            builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    finishAffinity();
+                    finish();
+
+                }
+            });
+            AlertDialog alertDialog = builder.create();
+            alertDialog.show();
+
+
         }
-        super.onPause();
+
+
     }
-
-    /** Called when returning to the activity */
-
 
     @Override
-    protected void onResume() {
-        super.onResume();
-        if (adView != null ) {
-            adView.resume();
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        int id = menuItem.getItemId();
+//        if (id ==R.id.nav_home ) {
+//            startActivity(new Intent(MainActivity.this, MainActivity.class));
+//            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+        if (id == R.id.nav_cardiovascular) {
+            startActivity(new Intent(MainActivity.this, CardiovascularActivity.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+        } else if (id == R.id.nav_rate) {
+            rateApp();
+        } else if (id == R.id.nav_share) {
+            Intent menuShare = new Intent(Intent.ACTION_SEND);
+
+            menuShare.setType("text/plain");
 
 
+            menuShare.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_text));
 
+            startActivity(Intent.createChooser(menuShare, getString(R.string.share_header)));
+
+        } else if (id == R.id.nav_respiratory) {
+            startActivity(new Intent(MainActivity.this, RespiratoryActivity.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        } else if (id == R.id.nav_bmi) {
+            startActivity(new Intent(MainActivity.this, BmiActivity.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        } else if (id == R.id.nav_renal) {
+            startActivity(new Intent(MainActivity.this, RenalActivity.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
+        } else if (id == R.id.nav_leanMass){
+            startActivity(new Intent(MainActivity.this, LeanMassActivity.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            startAppAd.showAd();
+        }else if (id == R.id.nav_feedback){
+            Intent Email = new Intent(Intent.ACTION_SENDTO);
+            Email.setData(Uri.parse("mailto:"));
+//            Email.setType("message/rfc822");
+            Email.putExtra(Intent.EXTRA_EMAIL,
+                    new String[]{"thecruxrepublic@gmail.com"});  //developer 's email//
+            Email.putExtra(Intent.EXTRA_SUBJECT,
+                    "FEEDBACK"); // Email 's Subject
+//            Email.putExtra(Intent.EXTRA_TEXT, "Dear Admin," + "");  //Email 's Greeting text//
+            if (Email.resolveActivity(getPackageManager())!=null){
+                startActivity(Intent.createChooser(Email, "Send Feedback From"));
+            }else{
+                Toast.makeText(MainActivity.this,"No email client Installed.", Toast
+                        .LENGTH_SHORT).show();
+            }
+//            try {
+//                startActivity(Intent.createChooser(Email, "Send Feedback From:"));
+//            } catch (android.content.ActivityNotFoundException ex) {
+//                Toast.makeText(BmiActivity.this, "No email client installed.", Toast.LENGTH_LONG).show();
+//            }
+            return true;
         }
+        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    private void rateApp() {
+        Intent rateIntent = new Intent(Intent.ACTION_VIEW);
+        rateIntent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.wordpress.cruxonlinedotblog.cruxbmicalc"));
+        rateIntent.setPackage("com.android.vending");
+        startActivity(rateIntent);
     }
 
-    /** Called before the activity is destroyed */
-    @Override
-    public void onDestroy() {
-        if (adView != null) {
-            adView.destroy();
-        }
-        super.onDestroy();
-    }
 
+
+//    @Override
+//    public boolean onSupportNavigateUp() {
+//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+//        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+//                || super.onSupportNavigateUp();
+//    }
 
 }
-
 

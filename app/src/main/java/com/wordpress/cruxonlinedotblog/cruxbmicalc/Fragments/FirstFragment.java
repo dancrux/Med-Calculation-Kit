@@ -1,4 +1,4 @@
-package com.wordpress.cruxonlinedotblog.cruxbmicalc.Fragments;
+package  com.wordpress.cruxonlinedotblog.cruxbmicalc.Fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,13 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.wordpress.cruxonlinedotblog.cruxbmicalc.R;
+
+import java.text.DecimalFormat;
 
 
 public class FirstFragment extends Fragment  {
@@ -51,9 +52,9 @@ public class FirstFragment extends Fragment  {
                 String weightStr = weight.getText().toString();
                 if (!height.getText().toString().equals("") && !weight.getText().toString().equals("")){
 
-                    float heightValue = Float.parseFloat(height.getText().toString());
-                    float weightValue = Float.parseFloat(weight.getText().toString());
-                    float bmi = weightValue / (heightValue * heightValue);
+                    double heightValue = Double.parseDouble(height.getText().toString());
+                    double weightValue = Double.parseDouble(weight.getText().toString());
+                    double bmi = weightValue / (heightValue * heightValue);
                     displayBMI(bmi);
 
                 } else if (TextUtils.isEmpty(weightStr)&&TextUtils.isEmpty(heightStr)) {
@@ -72,28 +73,29 @@ public class FirstFragment extends Fragment  {
 
 
 
-            private void displayBMI ( float bmi) {
-
-                String bmiLabel;
-                if (Float.compare(bmi, 15f) <= 0) {
+            private void displayBMI ( double bmi) {
+                String bmiLabel , formattedValue;
+                if (Double.compare(bmi, 15d) <= 0) {
                     bmiLabel = getString(R.string.you_severely_underweight);
-                } else if (Float.compare(bmi, 15f) > 0 && Float.compare(bmi, 16f) <= 0) {
+                } else if (Double.compare(bmi, 15d) > 0 && Double.compare(bmi, 16d) <= 0) {
                     bmiLabel = getString(R.string.you_very_underweight);
-                } else if (Float.compare(bmi, 16f) > 0 && Float.compare(bmi, 18.5f) <= 0) {
+                } else if (Double.compare(bmi, 16d) > 0 && Double.compare(bmi, 18.5d) <= 0) {
                     bmiLabel = getString(R.string.you_underweight);
-                } else if (Float.compare(bmi, 18.5f) > 0 && Float.compare(bmi, 25f) <= 0) {
+                } else if (Double.compare(bmi, 18.5d) > 0 && Double.compare(bmi, 25d) <= 0) {
                     bmiLabel = getString(R.string.you_normal_weight);
-                } else if (Float.compare(bmi, 25f) > 0 && Float.compare(bmi, 30f) <= 0) {
+                } else if (Double.compare(bmi, 25d) > 0 && Double.compare(bmi, 30d) <= 0) {
                     bmiLabel = getString(R.string.you_over_weight);
-                } else if (Float.compare(bmi, 30f) > 0 && Float.compare(bmi, 35f) <= 0) {
+                } else if (Double.compare(bmi, 30d) > 0 && Double.compare(bmi, 35d) <= 0) {
                     bmiLabel = getString(R.string.you_first_class_obese);
-                } else if (Float.compare(bmi, 35f) > 0 && Float.compare(bmi, 40f) <= 0) {
+                } else if (Double.compare(bmi, 35d) > 0 && Double.compare(bmi, 40d) <= 0) {
                     bmiLabel = getString(R.string.you_second_class_obese);
                 } else {
                     bmiLabel = getString(R.string.you_third_class_obese);
                 }
+                DecimalFormat decimalFormat = new DecimalFormat(".##");
+                formattedValue = decimalFormat.format(bmi);
 
-                bmiLabel = bmi + "\n" + bmiLabel;
+                bmiLabel = formattedValue + "\n" + bmiLabel;
                 result.setText(bmiLabel);
             }
 

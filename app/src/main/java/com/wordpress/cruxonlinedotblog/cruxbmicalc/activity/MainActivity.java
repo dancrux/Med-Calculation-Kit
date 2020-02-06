@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         StartAppSDK.init(this, "202986230", true);
+
 //        StartAppAd.enableAutoInterstitial();
 //        StartAppAd.setAutoInterstitialPreferences(
 //                new AutoInterstitialPreferences()

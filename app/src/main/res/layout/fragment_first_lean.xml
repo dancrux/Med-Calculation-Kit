@@ -112,30 +112,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/ibmResult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/DarkPurple"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ibmButton"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="@+id/ibmButton"
-        app:layout_constraintTop_toBottomOf="@+id/ibmButton" />
-
-    <TextView
-        android:id="@+id/bodyfatTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/DarkPurple"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/lbmPercentageText"
-        app:layout_constraintStart_toStartOf="@+id/lbmPercentageText"
-        app:layout_constraintTop_toBottomOf="@+id/lbmPercentageText" />
 
     <TextView
         android:id="@+id/ageTextView"
@@ -149,17 +125,7 @@
         app:layout_constraintStart_toStartOf="@+id/gendetTextView"
         app:layout_constraintTop_toBottomOf="@+id/gendetTextView" />
 
-    <TextView
-        android:id="@+id/lbmPercentageText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/LightGreenYellow"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/ibmResult"
-        app:layout_constraintStart_toStartOf="@+id/ibmResult"
-        app:layout_constraintTop_toBottomOf="@+id/ibmResult" />
+
 
     <TextView
         android:id="@+id/heightTextView"
@@ -193,8 +159,72 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/bodyfatTextView" />
+        app:layout_constraintTop_toBottomOf="@id/resultCard" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/resultCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="9dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibmButton">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ibmResult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toTopOf="@id/lbmPercentageText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lbmPercentageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                app:layout_constraintBottom_toTopOf="@id/bodyfatTextView"
+                app:layout_constraintEnd_toEndOf="@id/ibmResult"
+                app:layout_constraintStart_toStartOf="@id/ibmResult"
+                app:layout_constraintTop_toTopOf="@id/ibmResult" />
+
+
+            <TextView
+                android:id="@+id/bodyfatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:textIsSelectable="true"
+                app:layout_constraintEnd_toEndOf="@id/lbmPercentageText"
+                app:layout_constraintStart_toStartOf="@id/lbmPercentageText"
+                app:layout_constraintTop_toBottomOf="@id/lbmPercentageText" />
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

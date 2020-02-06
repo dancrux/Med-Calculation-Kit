@@ -163,7 +163,7 @@ public class FirstLeanFragment extends Fragment {
                 String bodyFatPercentage;
                 DecimalFormat df = new DecimalFormat("##");
                 String formattedValue = df.format(fatPercentage);
-                bodyFatPercentage = "Your Body Fat is "+formattedValue +"% of Your Body Weight";
+                bodyFatPercentage = "Your Body Fat is " +formattedValue +"% of Your Body Weight";
                 bodyfatTextView.setText(bodyFatPercentage);
             }
 

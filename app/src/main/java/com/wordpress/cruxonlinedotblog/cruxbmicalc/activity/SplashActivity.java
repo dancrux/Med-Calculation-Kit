@@ -24,6 +24,7 @@ protected int _splashTime= 4000;
                         .setCustomScreen(R.layout.activity_splash)
         );
 
+
 //        setContentView(R.layout.activity_splash);
         Thread splashThread = new Thread(){
             public void run(){

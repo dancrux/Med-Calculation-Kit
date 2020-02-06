@@ -75,42 +75,50 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/LightGreenYellow"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintBottom_toTopOf="@+id/resultCard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/height"
         app:layout_constraintVertical_bias="0.347" />
 
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="124dp"
-        android:gravity="center_horizontal"
-        android:textColor="@android:color/black"
-
-        android:textIsSelectable="true"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calc" />
-
     <com.startapp.android.publish.ads.banner.Banner
         android:id="@+id/startAppBanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
         android:layout_gravity="bottom|center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/result" />
+        app:layout_constraintTop_toBottomOf="@+id/resultCard" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/resultCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="9dp"
+        app:cardElevation="9dp"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc">
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="22sp"
+            android:textStyle="bold|italic" />
+    </android.support.v7.widget.CardView>
 
 
 </android.support.constraint.ConstraintLayout>

@@ -98,7 +98,6 @@ public class FirstFragment extends Fragment  {
                 bmiLabel = formattedValue + "\n" + bmiLabel;
                 result.setText(bmiLabel);
             }
-
         });
         return rootView;
 

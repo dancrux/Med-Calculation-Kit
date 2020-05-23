@@ -75,7 +75,7 @@ public class ThirdFragment extends Fragment {
             private void showResult(double result) {
 
                 String displayResult, formattedValue;
-                DecimalFormat df = new DecimalFormat(".##");
+                DecimalFormat df = new DecimalFormat("#.####");
                 formattedValue = df.format(result);
                 displayResult = formattedValue;
                 weight_result.setText(displayResult);

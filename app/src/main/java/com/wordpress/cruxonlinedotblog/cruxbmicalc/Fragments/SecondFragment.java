@@ -78,7 +78,7 @@ public class SecondFragment extends Fragment  {
 
             private void showResult(double result) {
                 String displayResult ,formattedValue;
-                DecimalFormat df = new DecimalFormat(".##");
+                DecimalFormat df = new DecimalFormat("#.####");
                 formattedValue = df.format(result);
                 displayResult = formattedValue;
                 length_result.setText(displayResult);

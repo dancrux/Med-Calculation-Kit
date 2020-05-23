@@ -92,7 +92,7 @@ public class FirstFragment extends Fragment  {
                 } else {
                     bmiLabel = getString(R.string.you_third_class_obese);
                 }
-                DecimalFormat decimalFormat = new DecimalFormat(".##");
+                DecimalFormat decimalFormat = new DecimalFormat("#.##");
                 formattedValue = decimalFormat.format(bmi);
 
                 bmiLabel = formattedValue + "\n" + bmiLabel;
